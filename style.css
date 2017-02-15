@@ -1,0 +1,140 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Open Sans, sans-serif;
+    font-weight: 100;
+}
+
+body {
+    background: url(imgs/bg.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    padding: 1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header, footer {
+    margin: auto;
+    padding: 2em;
+    width: 60%;
+    color: #ffffff;
+    background-color: rgb(28, 76, 152);
+    border-radius: 0.25em;
+}
+
+header {
+    text-align: center;
+}
+
+main, #tutorial {
+    margin: auto;
+    margin-top: 1em;
+    padding: 2em;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.25em;
+}
+
+main > h2 {
+    color: rgb(28, 76, 152);
+    text-align: center;
+}
+
+footer {
+    margin-top: 1em;
+    padding: 0.75em 2.7em;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+label > p > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] ~ div {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ div {
+    display: block;
+}
+
+h3 > span {
+    font-size: 0.75em;
+}
+
+i {
+    margin-top: 0.25em;
+}
+
+img {
+    opacity: 0.9;
+}
+
+li > div {
+    padding: 0.5em 1em;
+    width: 100%;    
+    background-color: rgba(28, 76, 152, 0.95);
+    color: #EEEEEE;
+    border-radius: 0.25em;
+}
+
+li > div > li {
+    margin: 0.5em 1em;
+}
+
+label > h3 {
+    margin-top: 0.75em;
+    margin-bottom: 0.25em;
+}
+
+ul {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    list-style-type: none;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    width: 80%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    padding: 0.5em 2em;
+    background-color: #ffffff;
+}
+
+#modal > h1 {
+    color: rgb(28, 76, 152);
+    text-align: center;
+    margin: 0.5em 1em;
+}
+
+#modal > h1 + p {
+    text-align: center;
+}
+
+#modal > p {
+    margin: 1em 1em;
+}
+
+.undecorated {
+    text-decoration: none;
+    color: inherit;
+}
+p > span {
+    font-size: 0.8em;
+}
