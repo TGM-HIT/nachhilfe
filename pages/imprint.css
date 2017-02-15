@@ -1,0 +1,34 @@
+@font-face {
+    font-family: opensans;
+    src: url("../opensans.ttf");
+}
+
+body {
+    margin: auto;
+    width: 75%;
+    min-height: 100%;
+    font-family: opensans;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.img-box {
+    margin: auto;
+    padding: 2em 2em;
+    text-align: center;
+}
+
+#box {
+    padding: 10%;
+    width: 80%;
+    height: 100%;
+    background-color: #dedede;
+}

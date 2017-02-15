@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Candara;
+}
+
+.img-box {
+    padding: 1em;
+    text-align: center;
+    margin: auto;
+}
+
+.entry {
+    width: 50%;
+    margin: 1em auto;
+    padding: 0.5em 1em;
+    background-color: #dedede;
+}
+
+.entry span {
+    font-size: 0.8em;
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+<students>
+    <!-- Daniel Modliba -->
+    <student id="dmodliba">
+        <firstname>Daniel</firstname>
+        <lastname>Modliba</lastname>
+        <grade>3CHIT</grade>
+        <subjects>
+            <subject>AM</subject>
+            <subject>SEW</subject>
+        </subjects>
+        <price>15</price>
+    </student>
+    <!-- Dragana Sunaric -->
+    <student id="dsunaric">
+        <firstname>Dragana</firstname>
+        <lastname>Sunaric</lastname>
+        <grade>4CHIT</grade>
+        <subjects>
+            <subject>AM</subject>
+            <subject>SEW</subject>
+        </subjects>
+        <price>10-15</price>
+    </student>
+    <!-- Mario Michael Fentler -->
+    <student id="mfentler">
+        <firstname>Mario Michael</firstname>
+        <lastname>Fentler</lastname>
+        <grade>3CHIT</grade>
+        <subjects>
+            <subject>SEW</subject>
+            <subject>MEDT</subject>
+        </subjects>
+        <price>12</price>
+    </student>
+    <!-- Michael Hornek -->
+    <student id="mhornek">
+        <firstname>Michael</firstname>
+        <lastname>Hornek</lastname>
+        <grade>4AHIT</grade>
+        <subjects>
+            <subject>D</subject>
+        </subjects>
+        <price>10</price>
+    </student>
+</students>
