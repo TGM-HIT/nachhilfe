@@ -5,12 +5,13 @@ if (!empty($xml->student)) {
     foreach ($xml->student as $student)
     {
         # Load data from xml as variables
-        $firstname = $student->firstname;
-        $grade = $student->grade;
-        $id = $student->attributes()->id;
-        $lastname = $student->lastname;
-        $price = $student->price;
-        $subjects = $student->subjects;
+        $firstname =    !empty($student->firstname) ? $student->firstname : null;
+        $grade =        !empty($student->grade) ? $student->grade : null;
+        $id =           !empty($student->attributes()->id) ? $student->attributes()->id : null;
+        $lastname =     !empty($student->lastname) ? $student->lastname : null;
+        $price =        !empty($student->price) ? $student->price : null;
+        $subjects =     !empty($student->subjects) ? $student->subjects : null;
+        # Create strings for later usage
         $grade_list_string = "";
         $subject_list_string = "";
         $subject_list_display= "";
@@ -19,10 +20,13 @@ if (!empty($xml->student)) {
             $grade_list_string = $grade_list_string . substr($item, 0, 1) . "|?|" . substr($item, 2, 4);
         }
 
-        foreach ($subjects->subject as $subject) {
-            $subject_list_string = $subject_list_string . "|?|" . $subject;
-            $subject_list_display = $subject_list_display . $subject . " ";
+        if (!empty($subjects->subject)) {
+            foreach ($subjects->subject as $subject) {
+                $subject_list_string = $subject_list_string . "|?|" . $subject;
+                $subject_list_display = $subject_list_display . $subject . " ";
+            }
         }
+
         $grade_list_string = strtoupper($grade_list_string);
         $subject_list_string = strtoupper($subject_list_string);
         # Build our entry
@@ -40,7 +44,7 @@ if (!empty($xml->student)) {
                 <div id=\"$id-content\" class=\"content\" hidden>
                     <div class=\"content-bar\"></div>
                     <div class=\"content-box\">
-                        <p><span>Preis: </span>$price €</p>
+                        <p><span>Preis: </span>".$price."€ <small>p. Stunde</small></p>
                         <p><span>Kontakt: </span>$id @student.tgm.ac.at</p>
                     </div>
                 </div>

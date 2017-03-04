@@ -1,29 +1,39 @@
 <?php
 $xml = simplexml_load_file("xml/students.xml") or die("Error loading data!");
 
-$subject_list = [];
-$grade_list = [];
-$year_list = [];
+$subject_list = array();
+$grade_list = array();
+$year_list = array();
 
-foreach ($xml->student as $student) {
-    foreach ($student->subjects as $subjects) {
-        foreach ($subjects->subject as $subject) {
-            if (!in_array($subject, $subject_list)) {
-                array_push($subject_list, $subject);
-
-                foreach ($student->grade as $grade) {
-                    $grade = substr($grade, 2);
-                    if (!in_array($grade, $grade_list)) {
-                        array_push($grade_list, $grade);
+if (!empty($xml->student)) {
+    foreach ($xml->student as $student) {
+        if (!empty($student->subjects)) {
+            foreach ($student->subjects as $subjects) {
+                if (!empty($subjects->subject)) {
+                    foreach ($subjects->subject as $subject) {
+                        if (!in_array($subject . "", $subject_list)) {
+                            array_push($subject_list, $subject);
+                        }
                     }
                 }
+            }
+        }
 
-                foreach ($student->grade as $year) {
-                    $year = substr($year, 0, 1);
-                    if (!in_array($year, $year_list)) {
-                        array_push($year_list, $year);
-                    }
+        if (!empty($student->grade)) {
+            foreach ($student->grade as $grade) {
+                $grade = substr($grade, 2);
+                if (!in_array($grade, $grade_list)) {
+                    array_push($grade_list, $grade);
                 }
+            }
+        } else {
+            break;
+        }
+
+        foreach ($student->grade as $year) {
+            $year = substr($year, 0, 1);
+            if (!in_array($year, $year_list)) {
+                array_push($year_list, $year);
             }
         }
     }

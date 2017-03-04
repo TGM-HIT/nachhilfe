@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <?xml-stylesheet type="text/xsl" href="students.xsl"?>
-<students>
+
+<students xmlns="http://technologe.at/schueler-nachhilfe"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://technologe.at/schueler-nachhilfe students.xsd">
     <!-- Daniel Modliba -->
     <student id="dmodliba">
         <firstname>Daniel</firstname>
@@ -21,7 +24,7 @@
             <subject>AM</subject>
             <subject>SEW</subject>
         </subjects>
-        <price>10-15</price>
+        <price>10</price>
     </student>
     <!-- Mario Michael Fentler -->
     <student id="mfentler">
@@ -29,8 +32,8 @@
         <lastname>Fentler</lastname>
         <grade>3CHIT</grade>
         <subjects>
-            <subject>SEW</subject>
             <subject>MEDT</subject>
+            <subject>SEW</subject>
         </subjects>
         <price>12</price>
     </student>
@@ -41,6 +44,17 @@
         <grade>4AHIT</grade>
         <subjects>
             <subject>D</subject>
+        </subjects>
+        <price>10</price>
+    </student>
+    <!-- Markus Reichl -->
+    <student id="mreichl">
+        <firstname>Markus</firstname>
+        <lastname>Reichl</lastname>
+        <grade>4AHIT</grade>
+        <subjects>
+            <subject>MEDT</subject>
+            <subject>SEW</subject>
         </subjects>
         <price>10</price>
     </student>
